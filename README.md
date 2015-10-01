@@ -70,3 +70,17 @@ Finally, don’t overcomplicate things. This task isn’t as hard as it may seem
 * **Submit a pull request early.**  There are various checks that happen automatically when you send a pull request.  **You should pay attention to these - the results will be added to your pull request**.  Green is good.
 
 * Finally submit a pull request before Monday at 9am with your solution or partial solution.  However much or little amount of code you wrote please please please submit a pull request before Monday at 9am
+
+- How to install this on your machine
+- Outline your approach
+- Describe any design patterns or principles you used
+- Obstacles you encountered and how you overcame them
+- Demonstrate what you learned
+- Further features/improvements you would add
+- The tests you have written
+- Badges  from the CI Build and Test Coverage
+- Descriptive commit messages
+- Passing tests
+- Good code. Have you run it through a linter and removed all extraneous comments?
+  (there are some really useful ones in Atom that’ll stop you getting loads of emails
+  from the Hound check that I can show you)
