@@ -1,6 +1,4 @@
 require 'plane'
-## Note these are just some guidelines!
-## Feel free to write more tests!!
 
 # When we create a new plane, it should be "flying",
 # thus planes can not be created in the airport.
@@ -15,27 +13,24 @@ require 'plane'
 # Are you testing that?
 
 describe Plane do
+  # let(:airport) { double(:airport) }
+
   it 'is flying when created' do
-    expect(subject).to be_flying
+    expect(subject.status).to eq(:flying)
   end
-  it 'is landed when landed' do
-    expect {subject.land}.to change(subject,:flying).from('flying').to('landed')
+  it 'can land' do
+    expect(subject).to respond_to(:land)
   end
-  context 'when flying' do
-    it { is_expected.to respond_to :flying?  }
-    it { is_expected.to respond_to :land     }
+  it 'is landed after landing' do
+    subject.land
+    expect(subject.status).to eq(:landed)
   end
-  # it 'errors' do
-  #   expect{actual}.to output('already in the air').to_stdout
-  #   expect{actual}.to output('already on the ground').to_stdout
-  # end
-  context 'when landed' do
-    it { is_expected.to respond_to :landed?  }
-    it { is_expected.to respond_to :take_off }
+  it 'can take off' do
+    expect(subject).to respond_to(:take_off)
   end
   it 'is flying after take off' do
-    # expect {subject.take_off}.to change(subject,:flying).from('landed').to('flying')
-    # expect(subject).to eq("flying")
-    expect(subject).to respond_to :flying?
+    subject.take_off
+    expect(subject.status).to eq(:flying)
   end
+
 end
